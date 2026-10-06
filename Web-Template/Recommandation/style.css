@@ -1,0 +1,223 @@
+/* 基础样式重置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #faebd7; /* 类似图片中的浅米色背景 */
+            padding: 40px;
+            color: #000;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* 顶部标题与返回按钮 */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+        }
+
+        .exit-btn {
+            padding: 8px 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 20px;
+            background: linear-gradient(135deg, #fcebb6, #eebb7a);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .exit-btn:hover {
+            transform: scale(1.05);
+        }
+
+        /* 画廊展示区 */
+        .gallery-wrapper {
+            width: 100%;
+            overflow: hidden; /* 隐藏超出部分 */
+            margin-bottom: 40px;
+        }
+
+        .gallery-track {
+            display: flex;
+            gap: 20px;
+            transition: transform 0.1s ease-out; /* 平滑滑动效果 */
+            /* 假设有更多图片，设置足够宽以便滑动 */
+            width: max-content; 
+        }
+
+        .gallery-item {
+            width: 260px;
+            height: 260px;
+            background-color: #ddd; /* 图片占位符背景 */
+            object-fit: cover;
+        }
+
+        /* 自定义滑动条 */
+        .slider-container {
+            margin-bottom: 60px;
+        }
+
+        input[type=range] {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 12px;
+            background: #fff;
+            outline: none;
+            cursor: pointer;
+        }
+
+        /* 滑动条轨道填充效果 (通过JS动态更新) */
+        input[type=range]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 12px;
+        }
+
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 12px;
+            width: 0px; /* 隐藏默认的拖动滑块，直接依靠轨道点击/拖拽 */
+        }
+
+        /* 底部信息卡片 */
+        .bottom-section {
+            display: flex;
+            gap: 40px;
+            justify-content: space-between;
+        }
+
+        .card {
+            background: #fff;
+            padding: 40px;
+            flex: 1;
+            min-height: 250px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05); 
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .card:hover {
+            transform: translateY(-5px); 
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+        }
+
+        .card h2 {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            text-align: center;
+            letter-spacing: 1px;
+            position: relative;
+        }
+        
+
+        /* 左侧表单区域 */
+        .request-area {
+            display: flex;
+            width: 100%;
+            margin: 0 auto;
+            height: 100px;
+            border: 2px solid #f0e6d6;
+            border-radius: 25px; 
+            overflow: hidden;
+            background: #fcfbf9;
+            transition: border-color 0.3s ease;
+        }
+        .request-area:focus-within {
+            border-color: #eebb7a; 
+        }
+        .request-area input {
+            flex: 1;
+            border: none;
+            outline: none;
+            padding: 0 20px;
+            background: transparent;
+            font-size: 0.95rem;
+            color: #333;
+        }
+        .request-area button {
+            width: 60px;
+            border: none;
+            background: linear-gradient(135deg, #fcebb6, #eebb7a);
+            color: #000;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: filter 0.2s;
+            ;
+        }
+        .request-area button:hover {
+            filter: brightness(0.95);
+        }
+
+        .request-desc {
+            text-align: center;
+            font-size: 0.85rem;
+            color: #888;
+            margin-top: 15px;
+        }
+
+        /* 右侧联系区域 */
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            padding-left: 20px;
+            font-weight: bold;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 12px 20px;
+            background-color: #fcfbf9; 
+            border: 1px solid #f0e6d6;
+            border-radius: 12px;
+            color: #444;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-item:hover {
+            background-color: #faebd7; 
+        }
+
+        .contact-item svg {
+            color: #eebb7a; 
+            flex-shrink: 0;
+        }
+
+        .contact-item span {
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+        }
+        
+        .contact-item strong {
+            color: #222;
+            margin-right: 5px;
+        }

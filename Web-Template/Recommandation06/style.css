@@ -1,0 +1,223 @@
+:root {
+            --primary-gold: #eebb7a;
+            --bg-glass: rgba(255, 255, 255, 0.25);
+            --text-dark: #333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            /* 背景图：建议替换为你文件夹中的厨房背景图 */
+            background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), 
+                        url('https://images.unsplash.com/photo-1556910103-1c02745aae4d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* 顶部标题与退出按钮 */
+        .page-header {
+            position: absolute;
+            top: 40px;
+            left: 5%;
+            right: 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            z-index: 10;
+        }
+
+        .main-title {
+            font-size: 2.5rem;
+            color: #000;
+            line-height: 1.1;
+            font-weight: 700;
+        }
+
+        .exit-btn {
+            background: linear-gradient(135deg, #fcebb6, #eebb7a);
+            border: none;
+            padding: 8px 30px;
+            border-radius: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        /* 核心玻璃拟态容器 */
+        .glass-container {
+            width: 90%;
+            max-width: 1100px;
+            background: var(--bg-glass);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 30px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding: 60px 40px;
+            gap: 40px;
+            position: relative;
+            margin-top: 80px;
+        }
+
+        /* --- 左侧：步骤列表 --- */
+        .steps-column {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            position: relative;
+        }
+
+        /* 垂直虚线 */
+        .steps-column::before {
+            content: '';
+            position: absolute;
+            left: 60px;
+            top: 20px;
+            bottom: 20px;
+            border-left: 1px dashed #666;
+            z-index: 0;
+        }
+
+        .step-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            z-index: 1;
+        }
+
+        .step-tag {
+            background: var(--primary-gold);
+            padding: 5px 15px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            width: 80px;
+            text-align: center;
+        }
+
+        .step-content {
+            background: #fff;
+            padding: 15px 25px;
+            border-radius: 12px;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .step-icon {
+            width: 30px;
+            height: 30px;
+            border: 1px solid var(--primary-gold);
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--primary-gold);
+        }
+
+        .step-text h4 { font-size: 0.9rem; color: #333; }
+        .step-text p { font-size: 0.8rem; color: #777; }
+
+        /* --- 中间/右侧：登录与图片展示 --- */
+        .right-column {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* 模拟图片中的登录弹窗 */
+        .login-modal {
+            background: #e6e0d4;
+            padding: 30px;
+            border: 10px solid #1a1a1a; /* 黑色加厚边框 */
+            border-radius: 10px;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .login-modal h3 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1rem;
+            letter-spacing: 2px;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        .input-group label {
+            display: block;
+            font-size: 0.7rem;
+            margin-bottom: 5px;
+            color: #666;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            background: #fff;
+        }
+
+        .login-btns {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .btn-black {
+            background: #000;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+
+        /* 右下角图片网格 */
+        .visual-assets {
+            display: flex;
+            gap: 15px;
+            align-items: flex-end;
+        }
+
+        .can-display {
+            width: 120px;
+            height: 180px;
+            background: #d4d0c7;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+
+        .grid-img {
+            width: 100px;
+            height: 100px;
+            background: #ddd;
+            border-radius: 8px;
+            object-fit: cover;
+        }

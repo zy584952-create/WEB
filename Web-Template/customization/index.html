@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Web Test</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Roboto'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!--Refer to:https://codepen.io/supah/pen/xxJMbbg -->
+
+<!-- partial:index.partial.html -->
+<!-- partial -->
+<div class="modal-container">
+        <div class="bg-lines"></div>
+
+        <button class="close-btn" onclick="window.location.href='../index.html'" style="cursor: pointer;">×</button>
+
+        <div class="sidebar">
+            <div class="slider-track">
+                <div class="slider-thumb" id="sideSlider"></div>
+            </div>
+        </div>
+
+        <div class="visual-center">
+            <div class="glowing-ring"></div>
+            <div class="glass-platform"></div>
+            <img src="redbackground.png" alt="Pink Can" class="main-can">
+        </div>
+
+        <div class="content-area">
+            
+            <div class="info-section">
+                <h3 class="section-title">Ingredients</h3>
+                <div class="card-row">
+                    <div class="glass-card active" onclick="selectCard(this)">
+                        <img src="TAURIN.png" class="card-icon" alt="Taurine">
+                        <div class="card-info">
+                            <span class="card-title">Taurine</span>
+                            <span class="card-desc">Energy Boost</span>
+                        </div>
+                    </div>
+                    <div class="glass-card" onclick="selectCard(this)">
+                        <img src="b12.png" class="card-icon" alt="B12">
+                        <div class="card-info">
+                            <span class="card-title">B12 Vitamin</span>
+                            <span class="card-desc">Nervous System</span>
+                        </div>
+                    </div>
+                    <div class="glass-card" onclick="selectCard(this)">
+                        <img src="Koffein.png" class="card-icon" alt="Caffeine">
+                        <div class="card-info">
+                            <span class="card-title">Caffeine</span>
+                            <span class="card-desc">Focus & Alert</span>
+                        </div>
+                    </div>
+                    <div class="glass-card" onclick="selectCard(this)">
+                        <img src="b5.png" class="card-icon" alt="B5">
+                        <div class="card-info">
+                            <span class="card-title">B5 Vitamin</span>
+                            <span class="card-desc">Cell Repair</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-section">
+                <h3 class="section-title">Flavour</h3>
+                <div class="card-row">
+                    <div class="glass-card active" onclick="selectCard(this)" data-img="redbackground.png"data-color="linear-gradient(135deg, #d48ba0 0%, #e6c4d0 100%)">
+                        <img src="strawberry.png" class="card-icon" alt="Strawberry">
+                        <div class="card-info">
+                            <span class="card-title">Strawberry</span>
+                            <span class="card-desc">Sweet & Sour</span>
+                        </div>
+                    </div>
+                    <div class="glass-card" onclick="selectCard(this)"data-img="lemonback.png"data-color="linear-gradient(135deg, #BCC0C6 0%, #C4D6DC 100%)">
+                        <img src="lemon.png" class="card-icon" alt="Lime">
+                        <div class="card-info">
+                            <span class="card-title">Lime</span>
+                            <span class="card-desc">Zesty Fresh</span>
+                        </div>
+                    </div>
+                    <div class="glass-card" onclick="selectCard(this)"data-img="grapeback.png"data-color="linear-gradient(135deg, #8F7B9E 0%, #B09BC1 100%)">
+                        <img src="grape.png" class="card-icon" alt="Grape">
+                        <div class="card-info">
+                            <span class="card-title">Grape</span>
+                            <span class="card-desc">Juicy Burst</span>
+                        </div>
+                    </div>
+                    <div class="glass-card" onclick="selectCard(this)"data-img="grapefruitback.png"data-color="linear-gradient(135deg, #DEA284 0%, #EAB399 100%)">
+                        <img src="Grapefruit.png" class="card-icon" alt="Grapefruit">
+                        <div class="card-info">
+                            <span class="card-title">Grapefruit</span>
+                            <span class="card-desc">Bitter Sweet</span>
+                        </div>
+                    </div>
+                     <div class="glass-card" onclick="selectCard(this)"data-img="greenbackground.png"data-color="linear-gradient(135deg, #B0B79A 0%, #B9BFA6 100%)">
+                        <img src="watermelon.png" class="card-icon" alt="Watermelon">
+                        <div class="card-info">
+                            <span class="card-title">Watermelon</span>
+                            <span class="card-desc">Summer Vibe</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+<header>
+	
+
+</header>
+
+
+<div class="cursor"></div>
+<div class="cursor cursor2"></div>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

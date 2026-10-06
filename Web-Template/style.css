@@ -1,0 +1,285 @@
+/* 全局重置与基础样式 */
+         body {
+            background: linear-gradient(144deg, #FFF1D3 0%, #FFDA9B 100%); /* 图片中的主背景色 */
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            color: #1a1a1a;
+            overflow-x: hidden;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* 通用容器 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ---------------- 顶部导航栏 ---------------- */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 0;
+        }
+
+        .menu-icon {
+            font-size: 24px;
+            cursor: pointer;
+            width: 30px;
+            height: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .menu-icon span {
+            display: block;
+            height: 2px;
+            width: 100%;
+            background-color: #000;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            font-weight: 500;
+        }
+
+        .btn-account {
+            background-color: #fff;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        /* ---------------- Hero 主体区域 ---------------- */
+        .hero-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px 0 80px;
+            position: relative;
+        }
+
+        .hero-text {
+            flex: 1;
+            z-index: 2;
+        }
+
+        h1 {
+            font-family: 'Georgia', serif; /* 类似图片中的衬线体 */
+            font-size: 2.5rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: #000;
+        }
+
+        /* "Kind" 文字后的方块背景 */
+        .highlight-box {
+            display: inline-block;
+            background-color: #FDFAF2; /* 浅米色背景 */
+            padding: 0 10px;
+            border-radius: 8px;
+            margin: 0 5px;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .subtext {
+            color: #4a4a4a;
+            font-size: 1.2rem;
+            max-width: 300px;
+            margin-bottom: 40px;
+            line-height: 1.5;
+        }
+
+        .dots {
+            display: flex;
+            gap: 8px;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            background-color: #fff;
+            border-radius: 50%;
+            opacity: 0.5;
+        }
+        .dot.active {
+            opacity: 1;
+        }
+
+        /* 图片展示区 */
+        .hero-visuals {
+            flex: 1;
+            position: relative;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            cursor: pointer; /* 提示可点击 */
+        }
+       
+        .hero-visuals:hover .circle-bg { transform: scale(1.05); }
+          /* --- 饮料图片通用样式 --- */
+
+        .can-img {
+            position: absolute;
+            /* 设置图片尺寸，根据你的实际图片比例调整 */
+            width: 180px; 
+            height: auto; 
+            
+            /* 关键动画属性 */
+            transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+            
+            /* 投影：让PNG图片更有立体感 */
+            filter: drop-shadow(-10px 10px 15px rgba(0,0,0,0.3));
+        }
+
+        /* --- 三个位置状态 --- */
+        
+        /* 1. 主位 (中间、大、最前) */
+        .pos-center {
+            left: 40px;
+            top: 40px;
+            transform: scale(0.6) rotate(0deg);
+            z-index: 10;
+            filter: drop-shadow(-15px 15px 20px rgba(0,0,0,0.4)); /* 主位投影更深 */
+        }
+
+        /* 2. 右上 (小、远、模糊) */
+        .pos-right-top {
+            left: 280px;
+            top: 40px;
+            transform: scale(0.45) rotate(15deg);
+            z-index: 5;
+            opacity: 0.9;
+            filter: blur(0.5px) drop-shadow(-5px 5px 10px rgba(0,0,0,0.2));
+        }
+
+        /* 3. 右下 (小、远、模糊) */
+        .pos-right-btm {
+            left: 520px;
+            top: 40px;
+            transform: scale(0.45) rotate(15deg);
+            z-index: 4;
+            opacity: 0.9;
+            filter: blur(0.5px) drop-shadow(-5px 5px 10px rgba(0,0,0,0.2));
+        }
+
+        
+    
+        /* ---------------- 底部功能条 ---------------- */
+        .info-bar {
+            border-top: 2px solid rgba(255,255,255,0.3);
+            border-bottom: 2px solid rgba(255,255,255,0.3);
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            padding: 0px 0;
+            margin-bottom: 50px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 50px;
+            border-right: 2px solid #ffffff4d;
+            text-align: left;
+            gap: 15px;
+        }
+
+        .info-item:last-child {
+            border-right: none;
+        }
+
+        .info-icon {
+            width: 40px;
+            height: 40px;
+            border: 2px solid #000;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2rem;
+        }
+
+        .info-text h4 {
+            font-weight: normal;
+            font-size: 0.9rem;
+        }
+
+        .center-text {
+            font-size: 1.2rem;
+            text-align: center;
+        }
+
+        .user-avatars {
+            display: flex;
+        }
+        .avatar {
+            width: 35px;
+            height: 35px;
+            background-color: #ddd;
+            border-radius: 50%;
+            border: 2px solid #7d7363;
+            margin-left: -10px;
+            background-size: cover;      
+            background-position: center;
+        }
+        .avatar:first-child { margin-left: 0; }
+
+        .rating-box {
+            margin-left: 10px;
+        }
+        .rating-score {
+            font-weight: bold;
+        }
+
+        /* ---------------- About Us 区域 ---------------- */
+        .about-section {
+            text-align: center;
+            padding-bottom: 60px;
+        }
+
+        .about-section h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            font-family: 'Georgia', serif;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .gallery-item {
+            height: 200px;
+            background-color: #9b9b9b;
+            border-radius: 4px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #555;
+            font-size: 1.2rem;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* 模拟图片效果 */
+        .img-1 { background: linear-gradient(45deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%); }
+        .img-2 { background: linear-gradient(120deg, #f6d365 0%, #fda085 100%); }
+        .img-3 { background: linear-gradient(to top, #30cfd0 0%, #330867 100%); }
+
+
+
